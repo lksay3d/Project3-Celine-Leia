@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TexasHoldem_Celine_Leia
 {
-    internal class Player2
+    public class Player2
     {
+        public List<Card> player2hand { get; set; }
+        public Player2()
+        {
+            this.player2hand = new List<Card>();
+        }
     }
 }
