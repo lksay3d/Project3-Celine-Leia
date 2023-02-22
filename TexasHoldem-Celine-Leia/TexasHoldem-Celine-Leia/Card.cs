@@ -37,19 +37,18 @@ namespace TexasHoldem_Celine_Leia
         
         public Face Face { get; set; }
         public Suit Suit { get; set; }
-        public Suit suit;
-        public Face face;
+        
 
 
         public Card(Suit suit, Face face)
         {
-            this.suit = suit;
-            this.face = face;
+            Suit = suit;
+            Face = face;
         }
 
         public override string ToString()
         {
-            return $"{face} of {suit}";
+            return $"{Face} of {Suit}";
         }
 
 
@@ -84,18 +83,18 @@ namespace TexasHoldem_Celine_Leia
         {
             
             Random random = new Random();
-            int randomIndex = random.Next(1, (53 + cardNum));
+            int randomIndex = random.Next(deck.Count);
             Card card = deck[randomIndex];
             deck.RemoveAt(randomIndex);
-            cardNum--;
+            cardNum++;
 
             return card;
         }
 
-
-       public int CardsLeft()
+        //Returns number of cards left in deck
+       public int cardsLeft()
         {
-            return cardNum;
+            return deck.Count-cardNum;
         }
             
 

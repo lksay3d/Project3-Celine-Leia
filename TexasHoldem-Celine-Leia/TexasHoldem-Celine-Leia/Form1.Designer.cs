@@ -1,4 +1,4 @@
-﻿namespace TexasHoldem_Celine_Leia
+﻿ namespace TexasHoldem_Celine_Leia
 {
     partial class Form1
     {
@@ -46,9 +46,9 @@
             this.table_Card3 = new System.Windows.Forms.Label();
             this.table_Card4 = new System.Windows.Forms.Label();
             this.table_Card5 = new System.Windows.Forms.Label();
-            this.potHoldings_lbl = new System.Windows.Forms.Label();
-            this.cards_in_deck_lbl = new System.Windows.Forms.Label();
-            this.currentPlayer_lbl = new System.Windows.Forms.Label();
+            this.potHoldings = new System.Windows.Forms.Label();
+            this.cards_in_deck = new System.Windows.Forms.Label();
+            this.currentPlayer = new System.Windows.Forms.Label();
             this.cardsindeck_lbl = new System.Windows.Forms.Label();
             this.pothold_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -220,32 +220,32 @@
             this.table_Card5.TabIndex = 17;
             this.table_Card5.Text = "________";
             // 
-            // potHoldings_lbl
+            // potHoldings
             // 
-            this.potHoldings_lbl.AutoSize = true;
-            this.potHoldings_lbl.Location = new System.Drawing.Point(160, 322);
-            this.potHoldings_lbl.Name = "potHoldings_lbl";
-            this.potHoldings_lbl.Size = new System.Drawing.Size(47, 20);
-            this.potHoldings_lbl.TabIndex = 18;
-            this.potHoldings_lbl.Text = "$_____";
+            this.potHoldings.AutoSize = true;
+            this.potHoldings.Location = new System.Drawing.Point(160, 322);
+            this.potHoldings.Name = "potHoldings";
+            this.potHoldings.Size = new System.Drawing.Size(47, 20);
+            this.potHoldings.TabIndex = 18;
+            this.potHoldings.Text = "$_____";
             // 
-            // cards_in_deck_lbl
+            // cards_in_deck
             // 
-            this.cards_in_deck_lbl.AutoSize = true;
-            this.cards_in_deck_lbl.Location = new System.Drawing.Point(799, 322);
-            this.cards_in_deck_lbl.Name = "cards_in_deck_lbl";
-            this.cards_in_deck_lbl.Size = new System.Drawing.Size(80, 20);
-            this.cards_in_deck_lbl.TabIndex = 19;
-            this.cards_in_deck_lbl.Text = "_____ Cards";
+            this.cards_in_deck.AutoSize = true;
+            this.cards_in_deck.Location = new System.Drawing.Point(799, 322);
+            this.cards_in_deck.Name = "cards_in_deck";
+            this.cards_in_deck.Size = new System.Drawing.Size(80, 20);
+            this.cards_in_deck.TabIndex = 19;
+            this.cards_in_deck.Text = "_____ Cards";
             // 
-            // currentPlayer_lbl
+            // currentPlayer
             // 
-            this.currentPlayer_lbl.AutoSize = true;
-            this.currentPlayer_lbl.Location = new System.Drawing.Point(109, 34);
-            this.currentPlayer_lbl.Name = "currentPlayer_lbl";
-            this.currentPlayer_lbl.Size = new System.Drawing.Size(69, 20);
-            this.currentPlayer_lbl.TabIndex = 20;
-            this.currentPlayer_lbl.Text = "__________";
+            this.currentPlayer.AutoSize = true;
+            this.currentPlayer.Location = new System.Drawing.Point(109, 34);
+            this.currentPlayer.Name = "currentPlayer";
+            this.currentPlayer.Size = new System.Drawing.Size(69, 20);
+            this.currentPlayer.TabIndex = 20;
+            this.currentPlayer.Text = "__________";
             // 
             // cardsindeck_lbl
             // 
@@ -272,9 +272,9 @@
             this.ClientSize = new System.Drawing.Size(954, 751);
             this.Controls.Add(this.pothold_lbl);
             this.Controls.Add(this.cardsindeck_lbl);
-            this.Controls.Add(this.currentPlayer_lbl);
-            this.Controls.Add(this.cards_in_deck_lbl);
-            this.Controls.Add(this.potHoldings_lbl);
+            this.Controls.Add(this.currentPlayer);
+            this.Controls.Add(this.cards_in_deck);
+            this.Controls.Add(this.potHoldings);
             this.Controls.Add(this.table_Card5);
             this.Controls.Add(this.table_Card4);
             this.Controls.Add(this.table_Card3);
@@ -295,6 +295,7 @@
             this.Controls.Add(this.betBtn);
             this.Name = "Form1";
             this.Text = "Texas Hold\'em";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,9 +321,9 @@
         private Label table_Card3;
         private Label table_Card4;
         private Label table_Card5;
-        private Label potHoldings_lbl;
-        private Label cards_in_deck_lbl;
-        private Label currentPlayer_lbl;
+        private Label potHoldings;
+        private Label cards_in_deck;
+        private Label currentPlayer;
         private Label cardsindeck_lbl;
         private Label pothold_lbl;
     }
