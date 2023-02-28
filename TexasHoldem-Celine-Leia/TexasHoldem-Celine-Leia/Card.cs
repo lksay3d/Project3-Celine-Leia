@@ -27,8 +27,6 @@ namespace TexasHoldem_Celine_Leia
        Queen,
        King,
        Ace
-
-
     }
 
 
