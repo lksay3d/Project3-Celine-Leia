@@ -23,7 +23,7 @@ namespace TexasHoldem_Celine_Leia
         RoyalFlush
 
     }
-    public class PokerHand
+    public class PokerHand : IComparable<PokerHand>
     {
         public List<Card> player1Comb = new List<Card>();
         public List<Card> player2Comb = new List<Card>();
