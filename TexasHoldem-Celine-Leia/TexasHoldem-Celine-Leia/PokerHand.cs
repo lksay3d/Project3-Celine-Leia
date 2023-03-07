@@ -431,11 +431,23 @@ namespace TexasHoldem_Celine_Leia
             return check;
         }
 
-        public bool? RoyalFlush(List<Card> cards)
+        public bool RoyalFlush(List<Card> cards)
         {
-            if()
+            bool check = false;
+            foreach (List<Card> combination in GetCombinations(cards))
+            {
+                SortCards(combination);
+                
+                if (combination[0].Face == Face.Ten && combination[1].Face == Face.Jack
+            && combination[2].Face == Face.Queen && combination[3].Face == Face.King
+            && combination[4].Face == Face.Ace)
+                {
+                    check = true;
+                }
 
-            return null;
+            }
+
+            return check;
         }
     }
 }
