@@ -55,6 +55,7 @@
             this.foldBtn_P1 = new System.Windows.Forms.Button();
             this.checkBtn_P1 = new System.Windows.Forms.Button();
             this.betBtn_P1 = new System.Windows.Forms.Button();
+            this.winningPlayer_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // betBtn_P2
@@ -309,11 +310,21 @@
             this.betBtn_P1.UseVisualStyleBackColor = true;
             this.betBtn_P1.Click += new System.EventHandler(this.betBtn_P1_Click);
             // 
+            // winningPlayer_label
+            // 
+            this.winningPlayer_label.AutoSize = true;
+            this.winningPlayer_label.Location = new System.Drawing.Point(431, 379);
+            this.winningPlayer_label.Name = "winningPlayer_label";
+            this.winningPlayer_label.Size = new System.Drawing.Size(81, 20);
+            this.winningPlayer_label.TabIndex = 27;
+            this.winningPlayer_label.Text = "____________";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 751);
+            this.Controls.Add(this.winningPlayer_label);
             this.Controls.Add(this.callBtn_P1);
             this.Controls.Add(this.foldBtn_P1);
             this.Controls.Add(this.checkBtn_P1);
@@ -378,5 +389,6 @@
         private Button foldBtn_P1;
         private Button checkBtn_P1;
         private Button betBtn_P1;
+        private Label winningPlayer_label;
     }
 }
