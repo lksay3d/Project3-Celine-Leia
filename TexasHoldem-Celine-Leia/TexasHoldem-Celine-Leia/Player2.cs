@@ -10,7 +10,7 @@ namespace TexasHoldem_Celine_Leia
     public class Player2
     {
         public List<Card> player2hand { get; set; }
-        int player1Holding;
+        int player2Holding;
         public Player2()
         {
             this.player2hand = new List<Card>();
@@ -19,13 +19,13 @@ namespace TexasHoldem_Celine_Leia
         public int player2Bet()
         {
             player2Holding--;
-            return player1Holding;
+            return player2Holding;
         }
 
-        public int totalPotP1(int pot)
+        public int totalPotP2(int pot)
         {
-            player1Holding = player1Holding + pot;
-            return player1Holding;
+            player2Holding = player2Holding + pot;
+            return player2Holding;
         }
     }
 }

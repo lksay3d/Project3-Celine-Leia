@@ -12,28 +12,25 @@ namespace TexasHoldem_Celine_Leia
     {
         public Deck deck = new Deck();
         public Player1 player1 = new Player1();
-        public Player2 player2 = new Player2(); 
-        //public List<Card> communityCard = new List<Card>();
-
-        public HoldemHand()
+        public Player2 player2 = new Player2();
+        public List<Card> communityCard = new List<Card>();
+        
+        public HoldemHand(Deck deck)
         {
             player1.player1hand.Add(deck.dealCard());
             player1.player1hand.Add(deck.dealCard());
             player2.player2hand.Add(deck.dealCard());
             player2.player2hand.Add(deck.dealCard());
+            for (int i = 0; i < 3; i++)
+            {
 
+                communityCard.Add(deck.dealCard());
+            }
         }
 
-        public List<Card> communityCards(Deck deck, int round)
+        public List<Card> communityCards(Deck deck, int round = 0)
         {
-            if (round == 0)
-            {
-                for (int i = 0; i < 3; i++)
-                {
 
-                    communityCard.Add(deck.dealCard());
-                }
-            }
             if (round == 1)
             {
 

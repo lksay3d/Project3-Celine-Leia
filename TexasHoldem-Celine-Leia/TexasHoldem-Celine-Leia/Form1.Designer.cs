@@ -277,6 +277,7 @@
             this.callBtn_P1.TabIndex = 26;
             this.callBtn_P1.Text = "Call";
             this.callBtn_P1.UseVisualStyleBackColor = true;
+            this.callBtn_P1.Click += new System.EventHandler(this.callBtn_P1_Click);
             // 
             // foldBtn_P1
             // 
@@ -286,6 +287,7 @@
             this.foldBtn_P1.TabIndex = 25;
             this.foldBtn_P1.Text = "Fold";
             this.foldBtn_P1.UseVisualStyleBackColor = true;
+            this.foldBtn_P1.Click += new System.EventHandler(this.foldBtn_P1_Click);
             // 
             // checkBtn_P1
             // 
@@ -295,6 +297,7 @@
             this.checkBtn_P1.TabIndex = 24;
             this.checkBtn_P1.Text = "Check";
             this.checkBtn_P1.UseVisualStyleBackColor = true;
+            this.checkBtn_P1.Click += new System.EventHandler(this.checkBtn_P1_Click);
             // 
             // betBtn_P1
             // 
@@ -304,6 +307,7 @@
             this.betBtn_P1.TabIndex = 23;
             this.betBtn_P1.Text = "Bet";
             this.betBtn_P1.UseVisualStyleBackColor = true;
+            this.betBtn_P1.Click += new System.EventHandler(this.betBtn_P1_Click);
             // 
             // Form1
             // 
