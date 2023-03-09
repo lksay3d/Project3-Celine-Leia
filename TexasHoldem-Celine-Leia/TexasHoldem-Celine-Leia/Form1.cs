@@ -8,10 +8,20 @@ namespace TexasHoldem_Celine_Leia
         public bool callBtn_Clicked = false;
         public int winner = 0;
         public HoldemHand game;
+        public Player1 player1 = new Player1();
+        public Player2 player2 = new Player2();
         public Deck CardDeck = new Deck();
-        public int player1winnerscore = -1;
-        public int player2winnerscore= -1;
+        public int player1winnerScore = -1;
+        public int player2winnerScore= -1;
         public int gameround = 0;
+        public PokerHand comparehands;
+        public PokerHand hand1;
+        public PokerHand hand2;
+
+
+
+
+
         //controlling player turn
         public class Player
         {
@@ -31,6 +41,7 @@ namespace TexasHoldem_Celine_Leia
             InitializeComponent();
             
             game = new HoldemHand(CardDeck);
+            
         }
 
         private void betBtn_Click(object sender, EventArgs e)
@@ -39,6 +50,10 @@ namespace TexasHoldem_Celine_Leia
             checkBtn_Clicked= false;
             foldBtn_Clicked= false;
             callBtn_Clicked= false;
+
+            player1.player1Bet();
+
+
         }
 
         private void checkBtn_Click(object sender, EventArgs e)
@@ -47,6 +62,8 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked= false;
             foldBtn_Clicked= false;
             callBtn_Clicked= false;
+
+           Turn();
         }
 
         private void foldBtn_Click(object sender, EventArgs e)
@@ -55,6 +72,8 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked= false;
             checkBtn_Clicked= false;
             callBtn_Clicked= false;
+
+            Turn();
         }
 
         private void callBtn_Click(object sender, EventArgs e)
@@ -63,12 +82,14 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked= false;
             foldBtn_Clicked= false;
             checkBtn_Clicked= false;
+
+            Turn();
         }
         public int CalulatePlayerWinner()
         {
             if (Turn() == 5)
             {
-                winner = player1Hand.hand1.CompareTo(player2Hand.hand2);
+                winner = comparehands.hand1.CompareTo(comparehands.hand2);
             }
             if (winner == player1winnerScore)
             {
@@ -93,10 +114,11 @@ namespace TexasHoldem_Celine_Leia
 
             }
 
-
             return gameround;
 
         }
+        
+          
 
         //ignore this method, mistakenly generated
         private void table_Card4_Click(object sender, EventArgs e)
@@ -120,6 +142,9 @@ namespace TexasHoldem_Celine_Leia
             checkBtn_Clicked = false;
             foldBtn_Clicked = false;
             callBtn_Clicked = false;
+
+            player2.player2Bet();
+            
         }
 
         private void checkBtn_P1_Click(object sender, EventArgs e)
@@ -128,6 +153,8 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked = false;
             foldBtn_Clicked = false;
             callBtn_Clicked = false;
+
+            Turn();
         }
 
         private void foldBtn_P1_Click(object sender, EventArgs e)
@@ -136,6 +163,8 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked = false;
             checkBtn_Clicked = false;
             callBtn_Clicked = false;
+
+            Turn();
         }
 
         private void callBtn_P1_Click(object sender, EventArgs e)
@@ -144,6 +173,8 @@ namespace TexasHoldem_Celine_Leia
             betBtn_Clicked = false;
             foldBtn_Clicked = false;
             checkBtn_Clicked = false;
+
+            Turn();
         }
     }
 }
