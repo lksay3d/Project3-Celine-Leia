@@ -80,7 +80,91 @@ namespace TexasHoldem_Celine_Leia
             }
             return combinations;
         }
+        //Comparing Functions
+        public Hand EvalHand(List<Card> cards)
+        {
+            if (RoyalFlush(cards))
+            {
+                return Hand.RoyalFlush;
+            }
+            if (IsStraight(cards))
+            {
+                return Hand.StraightFlush;
 
+            }
+            if (FourofAKind(cards))
+            {
+                return Hand.FourOfAKind;
+            }
+            if (FullHouse(cards))
+            {
+                return Hand.FullHouse;
+            }
+            if (IsFlush(cards))
+            {
+                return Hand.Flush;
+            }
+            if (ThreeOfAKind(cards))
+            {
+                return Hand.ThreeOfAKind;
+            }
+            if (TwoPair(cards))
+            {
+                return Hand.TwoPair;
+            }
+            return Hand.HighCard;
+        }
+        public Hand GetBestHand(List<Card> player)
+        {
+            List<List<Card>> combinations = GetCombinations(player);
+            Hand bestRank = Hand.HighCard;
+            foreach (List<Card> combination in combinations)
+            {
+                Hand rank = EvalHand(combination);
+                if (rank > bestRank)
+                {
+                    bestRank = rank;
+                }
+            }
+            return bestRank;
+        }
+
+        public int? CompareTo(PokerHand other)
+        {
+            Hand thisRank = GetBestHand(player1Comb);
+            Hand otherRank = other.GetBestHand(player2Comb);
+            if (thisRank > otherRank)
+            {
+                return 1;
+            }
+            else if (thisRank < otherRank)
+            {
+                return -1;
+            }
+            else
+            {
+                List<Card> thisCards = SortCards(player1Comb);
+                List<Card> otherCards = other.SortCards(player2Comb);
+                for (int i = 0; i < 5; i++)
+                {
+                    if (thisCards[i].Face > otherCards[i].Face)
+                    {
+                        return 1;
+                    }
+                    else if (thisCards[i].Face < otherCards[i].Face)
+                    {
+                        return -1;
+                    }
+                }
+                return 0;
+            }
+        }
+        public int? Comparehands(List<Card> comCards, List<Card> player1Cards, List<Card> player2Cards)
+        {
+            PokerHand hand1 = new PokerHand(comCards, player1Cards, new List<Card>());
+            PokerHand hand2 = new PokerHand(comCards, player2Cards, new List<Card>());
+            return hand1.CompareTo(hand2);
+        }
         //beginning function stuff
         public bool IsFlush(List<Card> other)
         {
