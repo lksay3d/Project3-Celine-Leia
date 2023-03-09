@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TexasHoldem_Celine_Leia;
 
 namespace TexasHoldem_Celine_Leia
 {
@@ -12,8 +13,8 @@ namespace TexasHoldem_Celine_Leia
         public Deck deck = new Deck();
         public Player1 player1 = new Player1();
         public Player2 player2 = new Player2(); 
-        public List<Card> communityCard = new List<Card>();
-        
+        //public List<Card> communityCard = new List<Card>();
+
         public HoldemHand()
         {
             player1.player1hand.Add(deck.dealCard());

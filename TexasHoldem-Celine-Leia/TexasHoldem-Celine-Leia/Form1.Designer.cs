@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.betBtn = new System.Windows.Forms.Button();
-            this.checkBtn = new System.Windows.Forms.Button();
-            this.foldBtn = new System.Windows.Forms.Button();
-            this.callBtn = new System.Windows.Forms.Button();
+            this.betBtn_P2 = new System.Windows.Forms.Button();
+            this.checkBtn_P2 = new System.Windows.Forms.Button();
+            this.foldBtn_P2 = new System.Windows.Forms.Button();
+            this.callBtn_P2 = new System.Windows.Forms.Button();
             this.playing_lbl = new System.Windows.Forms.Label();
             this.player2_lbl = new System.Windows.Forms.Label();
             this.player1_lbl = new System.Windows.Forms.Label();
@@ -51,52 +51,56 @@
             this.currentPlayer = new System.Windows.Forms.Label();
             this.cardsindeck_lbl = new System.Windows.Forms.Label();
             this.pothold_lbl = new System.Windows.Forms.Label();
+            this.callBtn_P1 = new System.Windows.Forms.Button();
+            this.foldBtn_P1 = new System.Windows.Forms.Button();
+            this.checkBtn_P1 = new System.Windows.Forms.Button();
+            this.betBtn_P1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // betBtn
+            // betBtn_P2
             // 
-            this.betBtn.Location = new System.Drawing.Point(142, 675);
-            this.betBtn.Name = "betBtn";
-            this.betBtn.Size = new System.Drawing.Size(94, 29);
-            this.betBtn.TabIndex = 0;
-            this.betBtn.Text = "Bet";
-            this.betBtn.UseVisualStyleBackColor = true;
-            this.betBtn.Click += new System.EventHandler(this.betBtn_Click);
+            this.betBtn_P2.Location = new System.Drawing.Point(142, 675);
+            this.betBtn_P2.Name = "betBtn_P2";
+            this.betBtn_P2.Size = new System.Drawing.Size(94, 29);
+            this.betBtn_P2.TabIndex = 0;
+            this.betBtn_P2.Text = "Bet";
+            this.betBtn_P2.UseVisualStyleBackColor = true;
+            this.betBtn_P2.Click += new System.EventHandler(this.betBtn_Click);
             // 
-            // checkBtn
+            // checkBtn_P2
             // 
-            this.checkBtn.Location = new System.Drawing.Point(323, 675);
-            this.checkBtn.Name = "checkBtn";
-            this.checkBtn.Size = new System.Drawing.Size(94, 29);
-            this.checkBtn.TabIndex = 1;
-            this.checkBtn.Text = "Check";
-            this.checkBtn.UseVisualStyleBackColor = true;
-            this.checkBtn.Click += new System.EventHandler(this.checkBtn_Click);
+            this.checkBtn_P2.Location = new System.Drawing.Point(323, 675);
+            this.checkBtn_P2.Name = "checkBtn_P2";
+            this.checkBtn_P2.Size = new System.Drawing.Size(94, 29);
+            this.checkBtn_P2.TabIndex = 1;
+            this.checkBtn_P2.Text = "Check";
+            this.checkBtn_P2.UseVisualStyleBackColor = true;
+            this.checkBtn_P2.Click += new System.EventHandler(this.checkBtn_Click);
             // 
-            // foldBtn
+            // foldBtn_P2
             // 
-            this.foldBtn.Location = new System.Drawing.Point(509, 675);
-            this.foldBtn.Name = "foldBtn";
-            this.foldBtn.Size = new System.Drawing.Size(94, 29);
-            this.foldBtn.TabIndex = 2;
-            this.foldBtn.Text = "Fold";
-            this.foldBtn.UseVisualStyleBackColor = true;
-            this.foldBtn.Click += new System.EventHandler(this.foldBtn_Click);
+            this.foldBtn_P2.Location = new System.Drawing.Point(509, 675);
+            this.foldBtn_P2.Name = "foldBtn_P2";
+            this.foldBtn_P2.Size = new System.Drawing.Size(94, 29);
+            this.foldBtn_P2.TabIndex = 2;
+            this.foldBtn_P2.Text = "Fold";
+            this.foldBtn_P2.UseVisualStyleBackColor = true;
+            this.foldBtn_P2.Click += new System.EventHandler(this.foldBtn_Click);
             // 
-            // callBtn
+            // callBtn_P2
             // 
-            this.callBtn.Location = new System.Drawing.Point(692, 675);
-            this.callBtn.Name = "callBtn";
-            this.callBtn.Size = new System.Drawing.Size(94, 29);
-            this.callBtn.TabIndex = 3;
-            this.callBtn.Text = "Call";
-            this.callBtn.UseVisualStyleBackColor = true;
-            this.callBtn.Click += new System.EventHandler(this.callBtn_Click);
+            this.callBtn_P2.Location = new System.Drawing.Point(692, 675);
+            this.callBtn_P2.Name = "callBtn_P2";
+            this.callBtn_P2.Size = new System.Drawing.Size(94, 29);
+            this.callBtn_P2.TabIndex = 3;
+            this.callBtn_P2.Text = "Call";
+            this.callBtn_P2.UseVisualStyleBackColor = true;
+            this.callBtn_P2.Click += new System.EventHandler(this.callBtn_Click);
             // 
             // playing_lbl
             // 
             this.playing_lbl.AutoSize = true;
-            this.playing_lbl.Location = new System.Drawing.Point(43, 34);
+            this.playing_lbl.Location = new System.Drawing.Point(63, 191);
             this.playing_lbl.Name = "playing_lbl";
             this.playing_lbl.Size = new System.Drawing.Size(60, 20);
             this.playing_lbl.TabIndex = 4;
@@ -241,7 +245,7 @@
             // currentPlayer
             // 
             this.currentPlayer.AutoSize = true;
-            this.currentPlayer.Location = new System.Drawing.Point(109, 34);
+            this.currentPlayer.Location = new System.Drawing.Point(129, 191);
             this.currentPlayer.Name = "currentPlayer";
             this.currentPlayer.Size = new System.Drawing.Size(69, 20);
             this.currentPlayer.TabIndex = 20;
@@ -265,11 +269,51 @@
             this.pothold_lbl.TabIndex = 22;
             this.pothold_lbl.Text = "Pot Holding:";
             // 
+            // callBtn_P1
+            // 
+            this.callBtn_P1.Location = new System.Drawing.Point(692, 25);
+            this.callBtn_P1.Name = "callBtn_P1";
+            this.callBtn_P1.Size = new System.Drawing.Size(94, 29);
+            this.callBtn_P1.TabIndex = 26;
+            this.callBtn_P1.Text = "Call";
+            this.callBtn_P1.UseVisualStyleBackColor = true;
+            // 
+            // foldBtn_P1
+            // 
+            this.foldBtn_P1.Location = new System.Drawing.Point(509, 25);
+            this.foldBtn_P1.Name = "foldBtn_P1";
+            this.foldBtn_P1.Size = new System.Drawing.Size(94, 29);
+            this.foldBtn_P1.TabIndex = 25;
+            this.foldBtn_P1.Text = "Fold";
+            this.foldBtn_P1.UseVisualStyleBackColor = true;
+            // 
+            // checkBtn_P1
+            // 
+            this.checkBtn_P1.Location = new System.Drawing.Point(323, 25);
+            this.checkBtn_P1.Name = "checkBtn_P1";
+            this.checkBtn_P1.Size = new System.Drawing.Size(94, 29);
+            this.checkBtn_P1.TabIndex = 24;
+            this.checkBtn_P1.Text = "Check";
+            this.checkBtn_P1.UseVisualStyleBackColor = true;
+            // 
+            // betBtn_P1
+            // 
+            this.betBtn_P1.Location = new System.Drawing.Point(142, 25);
+            this.betBtn_P1.Name = "betBtn_P1";
+            this.betBtn_P1.Size = new System.Drawing.Size(94, 29);
+            this.betBtn_P1.TabIndex = 23;
+            this.betBtn_P1.Text = "Bet";
+            this.betBtn_P1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 751);
+            this.Controls.Add(this.callBtn_P1);
+            this.Controls.Add(this.foldBtn_P1);
+            this.Controls.Add(this.checkBtn_P1);
+            this.Controls.Add(this.betBtn_P1);
             this.Controls.Add(this.pothold_lbl);
             this.Controls.Add(this.cardsindeck_lbl);
             this.Controls.Add(this.currentPlayer);
@@ -289,10 +333,10 @@
             this.Controls.Add(this.player1_lbl);
             this.Controls.Add(this.player2_lbl);
             this.Controls.Add(this.playing_lbl);
-            this.Controls.Add(this.callBtn);
-            this.Controls.Add(this.foldBtn);
-            this.Controls.Add(this.checkBtn);
-            this.Controls.Add(this.betBtn);
+            this.Controls.Add(this.callBtn_P2);
+            this.Controls.Add(this.foldBtn_P2);
+            this.Controls.Add(this.checkBtn_P2);
+            this.Controls.Add(this.betBtn_P2);
             this.Name = "Form1";
             this.Text = "Texas Hold\'em";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -303,10 +347,10 @@
 
         #endregion
 
-        private Button betBtn;
-        private Button checkBtn;
-        private Button foldBtn;
-        private Button callBtn;
+        private Button betBtn_P2;
+        private Button checkBtn_P2;
+        private Button foldBtn_P2;
+        private Button callBtn_P2;
         private Label playing_lbl;
         private Label player2_lbl;
         private Label player1_lbl;
@@ -326,5 +370,9 @@
         private Label currentPlayer;
         private Label cardsindeck_lbl;
         private Label pothold_lbl;
+        private Button callBtn_P1;
+        private Button foldBtn_P1;
+        private Button checkBtn_P1;
+        private Button betBtn_P1;
     }
 }

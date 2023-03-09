@@ -25,16 +25,19 @@ namespace TexasHoldem_Celine_Leia
     }
     public class PokerHand : IComparable<PokerHand>
     {
-        public List<Card> player1Comb = new List<Card>();
-        public List<Card> player2Comb = new List<Card>();
-
-
+        public List<Card> player1Comb { get; set; }
+        public List<Card> player2Comb { get; set; }
+        public List<Card> communitycards= new List<Card>();
+        public PokerHand hand1;
+        public PokerHand hand2;
+        public int result;
         public PokerHand(List<Card> comCards, List<Card> player1cards, List<Card> player2cards)
         {
 
             foreach (Card card in comCards)
             {
                 player1Comb.Add(card);
+                communitycards.Add(card);
             }
             foreach (Card card in player1cards)
             {
@@ -48,6 +51,9 @@ namespace TexasHoldem_Celine_Leia
             {
                 player2Comb.Add(card);
             }
+            hand1= new PokerHand(comCards, player1Comb, new List<Card>());
+            hand2 = new PokerHand(comCards, new List<Card>(), player2Comb);
+            result= hand1.CompareTo(hand2);
         }
 
         //from ChatGPT
@@ -129,7 +135,7 @@ namespace TexasHoldem_Celine_Leia
             return bestRank;
         }
 
-        public int? CompareTo(PokerHand other)
+        public int CompareTo(PokerHand other)
         {
             Hand thisRank = GetBestHand(player1Comb);
             Hand otherRank = other.GetBestHand(player2Comb);
@@ -159,12 +165,8 @@ namespace TexasHoldem_Celine_Leia
                 return 0;
             }
         }
-        public int? Comparehands(List<Card> comCards, List<Card> player1Cards, List<Card> player2Cards)
-        {
-            PokerHand hand1 = new PokerHand(comCards, player1Cards, new List<Card>());
-            PokerHand hand2 = new PokerHand(comCards, player2Cards, new List<Card>());
-            return hand1.CompareTo(hand2);
-        }
+        
+
         //beginning function stuff
         public bool IsFlush(List<Card> other)
         {
